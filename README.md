@@ -180,6 +180,15 @@ Implemented interfaces:
 
 ### Sparkfun MicroMod RP2040
 <details>
+
+Implemented interfaces:
+- GPIO
+- ADC
+- PWM
+- UART0 & UART1
+- I2C0
+- SPI0 & SPI1
+
 </details>
 
 

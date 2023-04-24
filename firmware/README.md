@@ -26,7 +26,7 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="239a", ATTR{idProduct}=="0109", MODE="0666"
 # Adafruit QTPY
 SUBSYSTEM=="usb", ATTR{idVendor}=="239a", ATTR{idProduct}=="00f7", MODE="0666"
 # Sparkfun MicroMod RP2040
-SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c626", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c627", MODE="0666"
 ```
 
 ### hidraw
@@ -44,7 +44,7 @@ KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="0109", TAG+="uacc
 # Adafruit QTPY
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="00f7", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Sparkfun MicroMod RP2040
-KERNEL=="hidraw*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c626", TAG+="uaccess", GROUP="plugdev", MODE="0660"
+KERNEL=="hidraw*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c627", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 ```
 
 Then reboot or reload udev rules:
