@@ -25,6 +25,8 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="239a", ATTR{idProduct}=="00fd", MODE="0666"
 SUBSYSTEM=="usb", ATTR{idVendor}=="239a", ATTR{idProduct}=="0109", MODE="0666"
 # Adafruit QTPY
 SUBSYSTEM=="usb", ATTR{idVendor}=="239a", ATTR{idProduct}=="00f7", MODE="0666"
+# Sparkfun MicroMod RP2040
+SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c626", MODE="0666"
 ```
 
 ### hidraw
@@ -41,6 +43,8 @@ KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="00fd", TAG+="uacc
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="0109", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 # Adafruit QTPY
 KERNEL=="hidraw*", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="00f7", TAG+="uaccess", GROUP="plugdev", MODE="0660"
+# Sparkfun MicroMod RP2040
+KERNEL=="hidraw*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c626", TAG+="uaccess", GROUP="plugdev", MODE="0660"
 ```
 
 Then reboot or reload udev rules:
@@ -70,6 +74,7 @@ Compatible board can be:
  - ITSYBITSY 
  - QTPY
  - QT2040_TRINKEY
+ - MICROMOD_RP2040
 
 Default compilation is for PICO board. But target board can be selected during cmake call: cmake -DBOARD=qtpy ..
 

@@ -178,6 +178,10 @@ Implemented interfaces:
 
 </details>
 
+### Sparkfun MicroMod RP2040
+<details>
+</details>
+
 
 ## Troubleshooting
 ### Import error using MicroPython module

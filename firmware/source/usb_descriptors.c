@@ -70,6 +70,11 @@
   #define USB_VID 0xCAFE
   #define USB_PID           (0x4000 | _PID_MAP(CDC, 0) | _PID_MAP(MSC, 1) | _PID_MAP(HID, 2) | \
                             _PID_MAP(MIDI, 3) | _PID_MAP(VENDOR, 4) )
+#elif BOARD == MICROMOD_RP2040
+  #define USB_MFG "SparkFun"
+  #define USB_PRD "MicroMod RP2040 U2IF"
+  #define USB_VID 0x046D
+  #define USB_PID 0xC626
 #else
   #warning "Please define board type"
 #endif
